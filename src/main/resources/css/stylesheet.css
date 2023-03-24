@@ -1,0 +1,13 @@
+.btn {
+    -fx-background-color: #7EE28E;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 5, 0, 0, 3);
+}
+
+.lgnLabel {
+    -fx-font-weight: bold;
+    -fx-font-size: 19px;
+    fx-font-family: "Courier";
+    -fx-font-style: normal;
+}
