@@ -1,14 +1,35 @@
 package ma.emsi.billingsystem;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import ma.emsi.DataBase.Instancer;
 
 public class LoginController {
+    Instancer instancer = new Instancer();
     @FXML
-    private Label welcomeText;
+    private TextField TFEmail;
+    @FXML
+    private TextField TFPassword;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private void BtnLogin() {
+
+        boolean response = instancer.person.isPerson(TFEmail.getText(), TFPassword.getText());
+
+        Dialog<String> dialog = new Dialog<String>();
+        ButtonType type = new ButtonType("Ok", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().add(type);
+
+        if(response) {
+            dialog.setTitle("Login");
+            dialog.setContentText("logged in successfully");
+        }else {
+            dialog.setTitle("Error");
+            dialog.setContentText("Wrong email or username");
+        }
+
+        dialog.showAndWait();
+
     }
 }

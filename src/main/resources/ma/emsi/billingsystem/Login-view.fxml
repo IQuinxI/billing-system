@@ -2,11 +2,10 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
-<AnchorPane prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.emsi.billingsystem.Tutorial">
+<AnchorPane prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.emsi.billingsystem.LoginController">
    <children>
       <GridPane fx:id="parentGrid" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -34,10 +33,10 @@
                         <VBox prefHeight="117.0" prefWidth="169.0" spacing="5.0" GridPane.rowIndex="1">
                            <children>
                               <Label text="Username Or Email" />
-                              <TextField prefHeight="25.0" prefWidth="64.0" />
+                              <TextField fx:id="TFEmail" prefHeight="25.0" prefWidth="64.0" />
                               <Label text="Password" />
-                              <TextField />
-                              <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="68.0" styleClass="btn" stylesheets="@../../../css/stylesheet.css" text="login" textAlignment="CENTER">
+                              <TextField fx:id="TFPassword" />
+                              <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#BtnLogin" onMouseClicked="#BtnLogin" prefWidth="68.0" styleClass="btn" stylesheets="@../../../css/stylesheet.css" text="login" textAlignment="CENTER">
                                  <VBox.margin>
                                     <Insets top="20.0" />
                                  </VBox.margin>
