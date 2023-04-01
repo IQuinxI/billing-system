@@ -6,7 +6,13 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<AnchorPane prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.emsi.billingsystem.Tutorial">
+<AnchorPane
+        prefHeight="350.0"
+        prefWidth="500.0"
+        style="-fx-background-color: white;"
+        xmlns="http://javafx.com/javafx/11.0.14-internal"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="ma.emsi.billingsystem.Tutorial">
    <children>
       <GridPane fx:id="parentGrid" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
