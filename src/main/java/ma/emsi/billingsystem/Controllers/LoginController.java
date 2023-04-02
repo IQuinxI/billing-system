@@ -9,14 +9,14 @@ public class LoginController {
     Instancer instancer = new Instancer();
 
     @FXML
-    private TextField TFEmail;
+    private TextField tfEmail;
     @FXML
-    private TextField TFPassword;
+    private TextField tfPassword;
 
     @FXML
-    private void BtnLogin() {
+    private void BtnonClick() {
 
-        boolean response = instancer.client.isClient(TFEmail.getText(), TFPassword.getText());
+        boolean response = instancer.client.isClient(tfEmail.getText(), tfPassword.getText());
 
         Dialog<String> dialog = new Dialog<String>();
         ButtonType type = new ButtonType("Ok", ButtonBar.ButtonData.OK_DONE);

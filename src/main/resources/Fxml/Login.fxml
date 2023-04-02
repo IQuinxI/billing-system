@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: white;" stylesheets="@../Styles/login.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.emsi.billingsystem.Controllers.LoginController">
+<AnchorPane prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: white;" stylesheets="@../Styles/login.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ma.emsi.billingsystem.Controllers.LoginController">
     <children>
         <GridPane fx:id="parentGrid" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <columnConstraints>
@@ -41,10 +33,10 @@
                                 <VBox prefHeight="117.0" prefWidth="169.0" spacing="5.0" GridPane.rowIndex="1">
                                     <children>
                                         <Label text="Username Or Email" />
-                                        <TextField prefHeight="25.0" prefWidth="64.0" />
+                                        <TextField fx:id="tfEmail" prefHeight="25.0" prefWidth="64.0" />
                                         <Label text="Password" />
-                                        <TextField />
-                                        <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="68.0" styleClass="btn" text="login" textAlignment="CENTER">
+                                        <TextField fx:id="tfPassword" />
+                                        <Button alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#BtnonClick" prefWidth="68.0" styleClass="btn" text="login" textAlignment="CENTER">
                                             <VBox.margin>
                                                 <Insets top="20.0" />
                                             </VBox.margin>
@@ -62,7 +54,7 @@
                     </GridPane.margin>
                 </HBox>
 
-                <ImageView fx:id="ImageViewBackground" fitHeight="355.0" fitWidth="272.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="ImageViewBackground" fitHeight="${parentGrid.height}" fitWidth="${parentGrid.width}" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/Logo.png" />
                </image>
