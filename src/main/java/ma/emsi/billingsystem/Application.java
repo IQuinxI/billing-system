@@ -11,7 +11,7 @@ public class Application extends javafx.application.Application {
     private ImageView ImageViewBackground;
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("Login-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("/Fxml/Login.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 600, 400);
         stage.setTitle("Login");
